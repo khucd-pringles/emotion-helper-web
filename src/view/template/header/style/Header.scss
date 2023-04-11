@@ -1,0 +1,53 @@
+#Header{
+  .header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 125px;
+    maring: 0 auto;
+    border-bottom: 3px solid black;
+    .left-wrapper{
+      display: flex;
+      align-items: center;
+      .logo-wrapper{
+        margin-left: 50px;
+        .logo-img{
+          width: 140px;
+          object-fit: contain;
+          background-color: green;
+        }
+      }
+      .tab-wrapper{
+        display: flex;
+        margin-left: 60px;
+        .tab-box-wrapper{
+          font-size: 24px;
+          margin-right: 30px;
+        }
+      }
+    }
+    .btn-wrapper{
+      display: flex;
+      margin-right: 50px;
+      .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        height: 64px;
+        border-radius: 16px;
+        border:1px solid gray;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        &.sign-up{
+          margin-right: 20px;
+        }
+        &.sign-in{
+
+        }
+      }
+    }
+  }
+
+}
