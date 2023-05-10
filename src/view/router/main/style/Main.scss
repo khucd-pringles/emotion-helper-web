@@ -23,6 +23,31 @@
     width: 100%;
     margin: 100px 0;
     border:1px solid gray;
+    .main-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .service-img-wrapper{
+        width: 500px;
+        height: 500px;
+        margin-right: 50px;
+        border:1px solid gray;
+        .service-img{
+          width: 500px;
+          object-fit: contain;
+        }
+      }
+      .service-text{
+        font-size: 40px;
+        font-weight: bold;
+
+      }
+    }
+    .technique-wrapper{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
     .review-wrapper{
       padding-bottom: 40px;
       .review-row-wrapper{
@@ -61,6 +86,34 @@
           }
         }
       }
+    }
+    .contact-us-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+      margin-top: 40px;
+      .contact-row-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 600px;
+        height: 80px;
+        .name{
+          margin-right: 160px;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .email{
+          min-width: 260px;
+          font-size: 22px;
+          font-weight: bold;
+          color:dimgray;
+        }
+      }
+    }
+    &.no-border{
+      border: none;
     }
   }
 }

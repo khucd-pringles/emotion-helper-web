@@ -4,15 +4,22 @@ import './style/Main.scss';
 function Main(props) {
     return (
         <div id={"Main"}>
-            <div className="main-start-wrapper">
-                시작하기
+            <div className="content-wrapper no-border">
+                <div className="main-wrapper">
+                    <div className="service-img-wrapper">
+                        <img className='service-img' alt={'service-img'}/>
+                    </div>
+                    <div className="service-text">
+                        서비스 설명
+                    </div>
+                </div>
             </div>
             <div className="content-wrapper">
                 <div className="content-title">
                     Technique
                 </div>
                 <div className="technique-wrapper">
-                    ㅁㄴ아ㅣㅓㅁㄴ이ㅓㅏㅁㅇ니ㅏㅁ어ㅣ나ㅣㅓㅏㅁ너이만어ㅣ마너이ㅏ먼이ㅏㅓ
+                    뭘 넣지이이이잉이ㅣㅇ이이ㅣ이이ㅣ이이이이이이이이이이이이이ㅣ잉이
                 </div>
             </div>
 
@@ -67,6 +74,24 @@ function Main(props) {
             <div className="content-wrapper">
                 <div className="content-title">
                     Contact Us
+                </div>
+                <div className="contact-us-wrapper">
+                    <div className="contact-row-wrapper">
+                        <div className="name">김형준</div>
+                        <div className="email">gudwns4985@khu.ac.kr</div>
+                    </div>
+                    <div className="contact-row-wrapper">
+                        <div className="name">박정민</div>
+                        <div className="email">jungmin59@khu.ac.kr</div>
+                    </div>
+                    <div className="contact-row-wrapper">
+                        <div className="name">유재형</div>
+                        <div className="email">dbwogud227@khu.ac.kr</div>
+                    </div>
+                    <div className="contact-row-wrapper">
+                        <div className="name">이성주</div>
+                        <div className="email">juscomputer@khu.ac.kr</div>
+                    </div>
                 </div>
             </div>
         </div>
