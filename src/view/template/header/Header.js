@@ -8,15 +8,23 @@ function Header(props) {
             <div className="header-container">
                 <div className="left-wrapper">
                     <div className="logo-wrapper">
-                        <img alt='' src={logo} className='logo-img'/>
+                        {/*<img alt='' src={logo} className='logo-img'/>*/}
+                        KHU
                     </div>
                     <div className="tab-wrapper">
                         <div className="tab-box-wrapper">
-                            서비스 소개
+                            Overview
                         </div>
                         <div className="tab-box-wrapper">
-                            서비스 소개
+                            Technique
                         </div>
+                        <div className="tab-box-wrapper">
+                            Review
+                        </div>
+                        <div className="tab-box-wrapper">
+                            Contact
+                        </div>
+
                     </div>
                 </div>
                 <div className="btn-wrapper">

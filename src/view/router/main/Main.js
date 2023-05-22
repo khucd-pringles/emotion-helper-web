@@ -1,5 +1,7 @@
 import React from 'react';
 import './style/Main.scss';
+import originalChatbot from "../../asset/images/original_chatbot.png";
+import outChatbot from "../../asset/images/ours_chatbot.png";
 
 function Main(props) {
     return (
@@ -7,8 +9,16 @@ function Main(props) {
             <div className="content-wrapper no-border">
                 <div className="main-wrapper">
                     <div className="service-img-wrapper">
-                        <img className='service-img' alt={'service-img'}/>
+                        <div className="service-img-box left">
+                            <img className='service-img' alt={'service-img'} src={originalChatbot}/>
+                            <div className="service-description">기존 Chatbot의 형태</div>
+                        </div>
+                        <div className="service-img-box">
+                            <img className='service-img' alt={'service-img'} src={outChatbot}/>
+                            <div className="service-description">해당 서비스 Chatbot의 형태</div>
+                        </div>
                     </div>
+
                     <div className="service-text">
                         서비스 설명
                     </div>
