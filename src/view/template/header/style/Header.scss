@@ -60,3 +60,69 @@
   }
 
 }
+
+.log-in-modal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20px 40px;
+  border: 5px solid #7950f7;
+  border-radius: 12px;
+  background-color: white;
+  .modal-title{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7950f7;
+    font-size: 36px;
+    font-weight: bold;
+
+  }
+  .modal-content{
+    width: 300px;
+    margin-top: 40px;
+    .input-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .input-text{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .pw-input{
+        width: 292px;
+        height: 40px;
+        font-size: 20px;
+      }
+    }
+    .btn-wrapper{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 40px;
+      .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 12px;
+        &.confirm{
+          background-color: #7950f7;
+          color:white;
+          font-weight: bold;
+          font-size: 20px;
+        }
+        &.close{
+          background-color: dimgray;
+          color:white;
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
