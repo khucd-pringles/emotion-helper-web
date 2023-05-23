@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import './style/Header.scss';
 import Modal from 'react-modal';
+import { useNavigate } from "react-router-dom";
 
 function Header(props) {
-
+    let navigate = useNavigate();
     const customStyles = {
         content: {
             position:'absolute',
@@ -36,10 +37,12 @@ function Header(props) {
         }
     }
 
-    console.log(password);
-
     const onClickLogIn = () => {
         setIsLogInModalOpen(true);
+    }
+
+    const onClickStart = () => {
+        navigate('/service');
     }
 
     return (
@@ -91,7 +94,7 @@ function Header(props) {
                     </div>
                     {
                         isLogIn ?
-                            <div className="btn-wrapper">
+                            <div className="btn-wrapper" onClick={()=>onClickStart()}>
                                 <div className="btn sign-in">Start</div>
                             </div>
                             :
