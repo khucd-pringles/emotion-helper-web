@@ -15,6 +15,52 @@
     height: 100%;
     border: 1px solid gray;
     background-color: silver;
+    overflow-y: auto;
+
+    .model-chat-row-wrapper{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .user-chat-row-wrapper{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .model-chat-row-wrapper::before {
+      content: "";
+      top: 50%;
+      border: 1em solid transparent;
+      z-index: 0;
+      right: 1em;
+      border-right: 1em solid rgba(92, 174, 227, 0.9);
+    }
+    .user-chat-row-wrapper::before {
+      content: "";
+      top: 50%;
+      border: 1em solid transparent; /** border를 모두 투명하게 설정 **/
+      z-index: 0;
+      right: 1em;
+      border-left: 1em solid rgba(92, 174, 227, 0.9);
+    }
+    .chat-box{
+      display: flex;
+      position: relative;
+      width: 300px;
+      min-height: 120px;
+      justify-content: center;
+      align-items: center;
+      background: rgba(92, 174, 227, 0.9);
+      border-radius: 15px;
+      padding: 10px;
+    }
   }
   .chat-input-wrapper{
     display: flex;
