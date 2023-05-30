@@ -4,6 +4,9 @@ import "./style/Service.scss";
 
 function Service(props) {
   const [responseText, setResponseText] = useState([]);
+  const [responseEmotion, setResponseEmotion] = useState([]);
+
+  const [responseData, setResponseData] = useState([]);
   const [textValue, setTextValue] = useState("");
   const [chatList, setChatList] = useState([]);
 
@@ -12,19 +15,17 @@ function Service(props) {
       .post("http://127.0.0.1:5000/predict", { text: textValue } )
       .then((response) => {
         console.log(response)
-        setResponseText((prevResponseText) => [
-          ...prevResponseText,
-          response.data.result,
-        ]);
-        chatList.push(response.data.result);
+
+        setResponseData((prevResponseData) => [
+            ...prevResponseData,
+            response.data
+        ])
+        chatList.push(response.data);
       })
       .catch((error) => {
         console.error(error);
       });
   };
-
-
-
 
   const onTypeEnter = (e) => {
     e.preventDefault();
@@ -53,11 +54,14 @@ function Service(props) {
                           </div>
                       </div>
                   :
-                      <div className={"model-chat-row-wrapper"} key={index}>
-                          <div className="model-chat-box">
-                              {li}
+                      <>
+                          <div className="emotion-wrapper">Bert가 분석한 User 감정 : {li.feel}</div>
+                          <div className={"model-chat-row-wrapper"} key={index}>
+                              <div className="model-chat-box">
+                                  {li.result}
+                              </div>
                           </div>
-                      </div>
+                      </>
                   }
               </>
           );

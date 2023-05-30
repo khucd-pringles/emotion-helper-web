@@ -23,22 +23,24 @@
     width: 100%;
     margin: 100px 0;
     padding:40px 10px;
-    border-radius: 12px;
-    box-shadow:1px 2px 37px rgba(0,0,0,.044);
+    border-radius: 24px;
+    box-shadow:1px 2px 37px rgba(0,0,0,0.44);
+    background-image:linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255, 173, 0, 0.1));
     .banner-wrapper{
       display: flex;
       justify-content: center;
 
       .banner-img-wrapper{
         margin-right: 50px;
-        padding:20px;
-        border-radius: 12px;
-        background-color: rgba(192,192,192,0.15);
         .banner-img{
           height: 700px;
           object-fit: contain;
           border-radius: 12px;
-          border:1px solid white;
+          box-shadow:1px 2px 37px rgba(0,0,0,0.44);
+        }
+        .banner-img:hover{
+          transform:scale(1.05);
+          transition : all 300ms ease-in;
         }
       }
       .banner-text-wrapper{
@@ -49,9 +51,18 @@
         .banner-text-row{
           text-align: center;
           font-size: 24px;
+          padding: 20px 40px;
+          background-color: rgba(192,192,192,0.15);
+          border-radius: 12px;
+
           &.bold{
             font-size:24px;
             margin:30px 0;
+          }
+          .banner-text{
+            background: linear-gradient(to right top, #7950f7, #ffa69e);
+            color: transparent;
+            -webkit-background-clip: text;
           }
         }
         .banner-text-row-result{
@@ -59,15 +70,24 @@
           justify-content: center;
           align-items: center;
           font-weight: bold;
-          background: linear-gradient(to right top, #7950f7, #ffa69e);
-          color: transparent;
-          -webkit-background-clip: text;
+          padding: 20px 40px;
+          background-color: rgba(192,192,192,0.15);
+          border-radius: 12px;
+          box-shadow:1px 2px 37px rgba(0,0,0,0.44);
+
           .result-img-wrapper{
             margin-right: 30px;
             font-size: 40px;
+            border-radius: 12px;
+            background: linear-gradient(to right top, #7950f7, #ffa69e);
+            color: transparent;
+            -webkit-background-clip: text;
           }
           .banner-text{
             font-size: 60px;
+            background: linear-gradient(to right top, #7950f7, #ffa69e);
+            color: transparent;
+            -webkit-background-clip: text;
           }
         }
       }

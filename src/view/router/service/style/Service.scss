@@ -17,12 +17,15 @@
     background-color: silver;
     overflow-y: scroll;
 
+    .emotion-wrapper{
+      margin-left: 40px;
+    }
     .model-chat-row-wrapper{
       display: flex;
       justify-content: flex-start;
       align-items: center;
       width: 100%;
-      margin: 20px 0;
+      margin-bottom: 20px;
     }
 
     .user-chat-row-wrapper{
