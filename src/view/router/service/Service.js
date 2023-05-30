@@ -45,11 +45,21 @@ function Service(props) {
       <div className="chat-wrapper">
         {chatList.map((li, index) => {
           return (
-            <div className={index % 2 === 0 ? "user-chat-row-wrapper" : "model-chat-row-wrapper"} key={index}>
-                <div className="chat-box">
-                    {li}
-                </div>
-            </div>
+              <>
+                  {index % 2 === 0 ?
+                      <div className={"user-chat-row-wrapper"} key={index}>
+                          <div className="user-chat-box">
+                              {li}
+                          </div>
+                      </div>
+                  :
+                      <div className={"model-chat-row-wrapper"} key={index}>
+                          <div className="model-chat-box">
+                              {li}
+                          </div>
+                      </div>
+                  }
+              </>
           );
         })}
       </div>

@@ -2,12 +2,28 @@ import React from 'react';
 import './style/Main.scss';
 import originalChatbot from "../../asset/images/original_chatbot.png";
 import outChatbot from "../../asset/images/ours_chatbot.png";
+import serviceCapture from "../../asset/images/service-capture.png";
 
 function Main(props) {
     return (
         <div id={"Main"}>
-            <div className="content-wrapper no-border">
-                <div className="main-wrapper">
+            <div className="content-wrapper banner">
+                <div className="banner-wrapper">
+                    <div className="banner-img-wrapper">
+                        <img src={serviceCapture} alt="" className="banner-img"/>
+                    </div>
+                    <div className="banner-text-wrapper">
+                        <div className="banner-text-row">캡스톤디자인</div>
+                        <div className="banner-text-row big bold">BERT & GPT 파인튜닝 및 파이프라이닝을 활용한 감성 대화 챗봇</div>
+                        <div className="banner-text-row-result">
+                            <div className="result-img-wrapper">-></div>
+                            <div className="banner-text">감성 Chatbot</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="content-wrapper">
+                <div className="service-wrapper">
                     <div className="service-img-wrapper">
                         <div className="service-img-box left">
                             <img className='service-img' alt={'service-img'} src={originalChatbot}/>

@@ -12,10 +12,10 @@
   }
   .chat-wrapper{
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 225px);
     border: 1px solid gray;
     background-color: silver;
-    overflow-y: auto;
+    overflow-y: scroll;
 
     .model-chat-row-wrapper{
       display: flex;
@@ -40,7 +40,7 @@
       border: 1em solid transparent;
       z-index: 0;
       right: 1em;
-      border-right: 1em solid rgba(92, 174, 227, 0.9);
+      border-right: 1em solid lightgray;
     }
     .user-chat-row-wrapper::before {
       content: "";
@@ -48,18 +48,33 @@
       border: 1em solid transparent; /** border를 모두 투명하게 설정 **/
       z-index: 0;
       right: 1em;
-      border-left: 1em solid rgba(92, 174, 227, 0.9);
+      border-left: 1em solid #9f88e3;
     }
-    .chat-box{
-      display: flex;
+    .model-chat-box{
       position: relative;
-      width: 300px;
-      min-height: 120px;
+      display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(92, 174, 227, 0.9);
+      width: 300px;
+      min-height: 120px;
+      padding: 16px;
       border-radius: 15px;
-      padding: 10px;
+      background: lightgray;
+      color:black;
+      font-size: 18px;
+    }
+    .user-chat-box{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      min-height: 120px;
+      padding: 16px;
+      border-radius: 15px;
+      background: #9f88e3;
+      color:white;
+      font-size: 18px;
     }
   }
   .chat-input-wrapper{
@@ -73,7 +88,7 @@
     .chat-input{
       width: 100%;
       padding:20px;
-      font-size: 30px;
+      font-size: 24px;
     }
     .enter-btn{
       display: flex;
