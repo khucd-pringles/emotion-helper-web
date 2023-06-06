@@ -6,21 +6,7 @@ function Service(props) {
 
   const [responseData, setResponseData] = useState([]);
   const [textValue, setTextValue] = useState("");
-  const [chatList, setChatList] = useState([
-    '안녕!', {feel_list: ['행복', '슬픔', '웃음'], result: '행복을 느끼고 계시네요!'},
-    '안녕!안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복을 느끼고 계시네요!행복을 느끼고 계시네요!행복을 느끼고 계시네요!행복을 느끼고 계시네요!행복을 느끼고 계시네요!'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복을 느끼고 asdsadsad계시네요!'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복을 느끼고 asd계시네요!'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복을 느끼고 !'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복네요!'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복asdasassaddadadasd을 느끼고 계시네요!'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복을 느끼고 계시네요!'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복을 느끼고 계asdasdasdaddsdasdsdasdasdasa시네요!'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행!'}, '안녕!',
-    {feel_list: ['행복', '슬픔', '웃음'], result: '행복을 느끼고 계시네요!'}, '안녕!',
-
-  ]);
+  const [chatList, setChatList] = useState([]);
 
   const handleButtonClick = () => {
     axios
