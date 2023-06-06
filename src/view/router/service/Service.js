@@ -43,9 +43,9 @@ function Service(props) {
         }
     };
 
-    const handleButtonClickAgain = async (feel, index) => {
+    const handleButtonClickAgain = async (feel, text) => {
         await axios
-            .post("http://127.0.0.1:5000/predict-again", {feel: feel, text: textValue})
+            .post("http://127.0.0.1:5000/predict-again", {feel: feel, text: text})
             .then((response) => {
                 setResponseData((prevResponseData) => [
                     ...prevResponseData,
@@ -73,7 +73,7 @@ function Service(props) {
         chatList.push(text);
         setChatLength(prevState => prevState + 1)
 
-        handleButtonClickAgain(feel, index);
+        handleButtonClickAgain(feel, text);
     }
 
     useEffect(() => {
