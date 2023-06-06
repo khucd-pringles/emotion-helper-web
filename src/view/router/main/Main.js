@@ -3,127 +3,246 @@ import './style/Main.scss';
 import originalChatbot from "../../asset/images/original_chatbot.png";
 import outChatbot from "../../asset/images/ours_chatbot.png";
 import serviceCapture from "../../asset/images/service-capture.png";
+import serviceDescription from "../../asset/images/service-description.png";
+// import AiOutlineArrowDown from "react-icons/ai";
+import {TypeAnimation} from 'react-type-animation';
+
+const Feel = [
+    {"label": "가난한", color: 'darkgray'},
+    {"label": "불우한", color: 'lightgray'},
+    {"label": "감사하는", color: 'darkgray'},
+    {"label": "걱정스러운", color: 'lightgray'},
+    {"label": "고립된", color: 'darkgray'},
+    {"label": "괴로워하는", color: 'lightgray'},
+    {"label": "구역질 나는", color: 'darkgray'},
+    {"label": "기쁨", color: 'lightgray'},
+    {"label": "낙담한", color: 'darkgray'},
+    {"label": "의식하는", color: 'lightgray'},
+    {"label": "노여워하는", color: 'darkgray'},
+    {"label": "눈물이 나는", color: 'lightgray'},
+    {"label": "느긋", color: 'lightgray'},
+    {"label": "당혹스러운", color: 'darkgray'},
+    {"label": "당황", color: 'lightgray'},
+    {"label": "두려운", color: 'darkgray'},
+    {"label": "마비된", color: 'lightgray'},
+    {"label": "만족스러운", color: 'darkgray'},
+    {"label": "방어적인", color: 'lightgray'},
+    {"label": "배신당한", color: 'darkgray'},
+    {"label": "버려진", color: 'lightgray'},
+    {"label": "부끄러운", color: 'darkgray'},
+    {"label": "분노", color: 'lightgray'},
+    {"label": "불안", color: 'darkgray'},
+    {"label": "비통한", color: 'darkgray'},
+    {"label": "상처", color: 'lightgray'},
+    {"label": "성가신", color: 'darkgray'},
+    {"label": "스트레스 받는", color: 'lightgray'},
+    {"label": "슬픔", color: 'darkgray'},
+    {"label": "신뢰하는", color: 'lightgray'},
+    {"label": "신이 난", color: 'darkgray'},
+    {"label": "실망한", color: 'lightgray'},
+    {"label": "악의적인", color: 'darkgray'},
+    {"label": "안달하는", color: 'lightgray'},
+    {"label": "안도", color: 'darkgray'},
+    {"label": "억울한", color: 'lightgray'},
+    {"label": "열등감", color: 'lightgray'},
+    {"label": "염세적인", color: 'darkgray'},
+    {"label": "외로운", color: 'lightgray'},
+    {"label": "우울한", color: 'darkgray'},
+    {"label": "자신하는", color: 'lightgray'},
+    {"label": "조심스러운", color: 'darkgray'},
+    {"label": "좌절한", color: 'lightgray'},
+    {"label": "죄책감의", color: 'darkgray'},
+    {"label": "질투하는", color: 'lightgray'},
+    {"label": "짜증내는", color: 'darkgray'},
+    {"label": "초조한", color: 'lightgray'},
+    {"label": "충격 받은", color: 'darkgray'},
+    {"label": "취약한", color: 'darkgray'},
+    {"label": "툴툴대는", color: 'lightgray'},
+    {"label": "편안한", color: 'darkgray'},
+    {"label": "한심한", color: 'lightgray'},
+    {"label": "혐오스러운", color: 'darkgray'},
+    {"label": "혼란스러운", color: 'lightgray'},
+    {"label": "환멸을 느끼는", color: 'darkgray'},
+    {"label": "회의적인", color: 'lightgray'},
+    {"label": "후회되는", color: 'darkgray'},
+    {"label": "흥분", color: 'lightgray'},
+    {"label": "희생된", color: 'darkgray'},
+    {"label": "당황", color: 'lightgray'},
+]
 
 function Main(props) {
+
     return (
         <div id={"Main"}>
-            <div className="content-wrapper banner">
-                <div className="banner-wrapper">
-                    <div className="banner-img-wrapper">
-                        <img src={serviceCapture} alt="" className="banner-img"/>
+            <div className="container">
+                <div className="content-wrapper">
+                    <div className="banner-text">캡스톤디자인</div>
+                    <div className="banner-title-wrapper">
+                        <div className="banner-title-row">BERT & GPT 파인튜닝 및 파이프라이닝을</div>
+                        <div className="banner-title-row">활용한 감성 대화 챗봇</div>
                     </div>
-                    <div className="banner-text-wrapper">
-                        <div className="banner-text-row big bold">
-                            <div className="banner-text">
-                                BERT & GPT 파인튜닝 및 파이프라이닝을 활용한 감성 대화 챗봇
-                            </div>
-                        </div>
-                        <div className="banner-text-row-result">
-                            <div className="result-img-wrapper">-></div>
-                            <div className="banner-text">감성 Chatbot</div>
-                        </div>
-                    </div>
+                    <div className="banner-img-wrapper">서비스 화면 캡처</div>
                 </div>
-            </div>
-            <div className="content-wrapper">
-                <div className="service-wrapper">
-                    <div className="service-img-wrapper">
-                        <div className="service-img-box left">
-                            <img className='service-img' alt={'service-img'} src={originalChatbot}/>
-                            <div className="service-description">기존 Chatbot의 형태</div>
-                        </div>
-                        <div className="service-img-box">
-                            <img className='service-img' alt={'service-img'} src={outChatbot}/>
-                            <div className="service-description">해당 서비스 Chatbot의 형태</div>
-                        </div>
-                    </div>
 
-                    <div className="service-text">
-                        서비스 설명
+                <div className="content-wrapper">
+                    <div className="problem-wrapper">
+                        <div className="problem-text-wrapper">
+                            <div className="problem-title">Problem</div>
+                            <div className="problem-text">기존의 문제점 블라블라블라블라인 문제점이 있었다.</div>
+                        </div>
+                        <div className="problem-img-wrapper">
+                            <img src={originalChatbot} alt="" className="problem-img"/>
+                        </div>
+                    </div>
+                    <div className="problem-wrapper">
+                        <div className="problem-text-wrapper margin-less">
+                            <div className="problem-title">Solution</div>
+                            <div className="problem-text">문제점을 해결하기 위해 이런 방안 들을 적용했고, 어찌저찌하도록 수정했습니다.</div>
+                        </div>
+                        <div className="problem-img-wrapper">
+                            <img src={outChatbot} alt="" className="problem-img"/>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="content-wrapper">
-                <div className="content-title">
-                    Technique
+
+                <div className="content-wrapper">
+                    <div className="content-title">How ?</div>
+                    <div className="sub-content-wrapper">
+                        <div className="sub-title">사용자의 입력을 약 60개의 감정으로 분류</div>
+                        <div className="emotion-wrapper">
+                            <div className="service-emotion-list-wrapper">
+                                {
+                                    Feel.map((li, index) => {
+                                        return (
+                                            <div className="list-box" key={index} style={{backgroundColor:li.color}}>
+                                                {li.label}
+                                            </div>
+                                        )
+                                    })}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="sub-content-wrapper">
+                        <div className="sub-title">
+                            분석한 감정을 답변 생성에 반영하여 출력
+                        </div>
+                        <div className="description-wrapper">
+                            <div className="example-wrapper">
+                                <div className="example-text">
+                                    '시험을 망쳐서 속상해'
+                                </div>
+                                {/*<AiOutlineArrowDown/>*/}
+                                <div className="example-emotion">
+                                    '낙담하는'
+                                </div>
+                            </div>
+                            <TypeAnimation
+                                sequence={[
+                                    '친구랑 싸워서 속상해',
+                                    1000,
+                                    '올해 여름에는 비가 많이 온대',
+                                    1000,
+                                    '종강하면 해외여행 갈거야',
+                                    1000,
+                                    () => {
+                                        console.log('Sequence completed'); // Place optional callbacks anywhere in the array
+                                    }
+                                ]}
+                                wrapper="span"
+                                cursor={true}
+                                repeat={Infinity}
+                                style={{fontSize: '20px', display: 'inline-block'}}
+                            />
+                            <div className="description-text-wrapper"></div>
+                        </div>
+                    </div>
                 </div>
-                <div className="technique-wrapper">
-                    뭘 넣지이이이잉이ㅣㅇ이이ㅣ이이ㅣ이이이이이이이이이이이이이ㅣ잉이
+                <div className="content-wrapper technique">
+                    <div className="content-title">
+                        Technique
+                    </div>
+                    <div className="technique-wrapper">
+                        뭘 넣지이이이잉이ㅣㅇ이이ㅣ이이ㅣ이이이이이이이이이이이이이ㅣ잉이
+                    </div>
+                </div>
+                <div className="content-wrapper">
+                    <div className="content-title">
+                        Review
+                    </div>
+                    <div className="review-wrapper">
+                        <div className="review-row-wrapper">
+                            <div className="review-box-wrapper">
+                                <div className="writer-wrapper">
+                                    <div className="img-box"></div>
+                                    <div className="writer-name">김형준</div>
+                                </div>
+                                <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고
+                                    있습니다.
+                                    저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
+                                </div>
+                            </div>
+                            <div className="review-box-wrapper">
+                                <div className="writer-wrapper">
+                                    <div className="img-box"></div>
+                                    <div className="writer-name">김형준</div>
+                                </div>
+                                <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고
+                                    있습니다.
+                                    저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div className="review-row-wrapper">
+                            <div className="review-box-wrapper">
+                                <div className="writer-wrapper">
+                                    <div className="img-box"></div>
+                                    <div className="writer-name">김형준</div>
+                                </div>
+                                <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고
+                                    있습니다.
+                                    저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
+                                </div>
+                            </div>
+                            <div className="review-box-wrapper">
+                                <div className="writer-wrapper">
+                                    <div className="img-box"></div>
+                                    <div className="writer-name">김형준</div>
+                                </div>
+                                <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고
+                                    있습니다.
+                                    저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="content-wrapper">
+                    <div className="content-title">
+                        Contact Us
+                    </div>
+                    <div className="contact-us-wrapper">
+                        <div className="contact-row-wrapper">
+                            <div className="name">김형준</div>
+                            <div className="email">gudwns4985@khu.ac.kr</div>
+                        </div>
+                        <div className="contact-row-wrapper">
+                            <div className="name">박정민</div>
+                            <div className="email">jungmin59@khu.ac.kr</div>
+                        </div>
+                        <div className="contact-row-wrapper">
+                            <div className="name">유재형</div>
+                            <div className="email">dbwogud227@khu.ac.kr</div>
+                        </div>
+                        <div className="contact-row-wrapper">
+                            <div className="name">이성주</div>
+                            <div className="email">juscomputer@khu.ac.kr</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-            <div className="content-wrapper">
-                <div className="content-title">
-                    Review
-                </div>
-                <div className="review-wrapper">
-                    <div className="review-row-wrapper">
-                        <div className="review-box-wrapper">
-                            <div className="writer-wrapper">
-                                <div className="img-box"></div>
-                                <div className="writer-name">김형준</div>
-                            </div>
-                            <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다.
-                                저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
-                            </div>
-                        </div>
-                        <div className="review-box-wrapper">
-                            <div className="writer-wrapper">
-                                <div className="img-box"></div>
-                                <div className="writer-name">김형준</div>
-                            </div>
-                            <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다.
-                                저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
-                            </div>
-                        </div>
-                    </div>
-                    <div className="review-row-wrapper">
-                        <div className="review-box-wrapper">
-                            <div className="writer-wrapper">
-                                <div className="img-box"></div>
-                                <div className="writer-name">김형준</div>
-                            </div>
-                            <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다.
-                                저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
-                            </div>
-                        </div>
-                        <div className="review-box-wrapper">
-                            <div className="writer-wrapper">
-                                <div className="img-box"></div>
-                                <div className="writer-name">김형준</div>
-                            </div>
-                            <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다.
-                                저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="content-wrapper">
-                <div className="content-title">
-                    Contact Us
-                </div>
-                <div className="contact-us-wrapper">
-                    <div className="contact-row-wrapper">
-                        <div className="name">김형준</div>
-                        <div className="email">gudwns4985@khu.ac.kr</div>
-                    </div>
-                    <div className="contact-row-wrapper">
-                        <div className="name">박정민</div>
-                        <div className="email">jungmin59@khu.ac.kr</div>
-                    </div>
-                    <div className="contact-row-wrapper">
-                        <div className="name">유재형</div>
-                        <div className="email">dbwogud227@khu.ac.kr</div>
-                    </div>
-                    <div className="contact-row-wrapper">
-                        <div className="name">이성주</div>
-                        <div className="email">juscomputer@khu.ac.kr</div>
-                    </div>
-                </div>
-            </div>
         </div>
+
     );
 }
 

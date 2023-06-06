@@ -3,8 +3,6 @@ import axios from "axios";
 import "./style/Service.scss";
 
 function Service(props) {
-  const [responseText, setResponseText] = useState([]);
-  const [responseEmotion, setResponseEmotion] = useState([]);
 
   const [responseData, setResponseData] = useState([]);
   const [textValue, setTextValue] = useState("");
@@ -14,8 +12,7 @@ function Service(props) {
     axios
       .post("http://127.0.0.1:5000/predict", { text: textValue } )
       .then((response) => {
-        console.log(response)
-
+        console.log(response);
         setResponseData((prevResponseData) => [
             ...prevResponseData,
             response.data
@@ -46,7 +43,7 @@ function Service(props) {
       <div className="chat-wrapper">
         {chatList.map((li, index) => {
           return (
-              <>
+              <div key={index}>
                   {index % 2 === 0 ?
                       <div className={"user-chat-row-wrapper"} key={index}>
                           <div className="user-chat-box">
@@ -55,7 +52,7 @@ function Service(props) {
                       </div>
                   :
                       <>
-                          <div className="emotion-wrapper">Bert가 분석한 User 감정 : {li.feel}</div>
+                          <div className="emotion-wrapper">Bert가 분석한 User 감정 : {li.feel_list[0]}</div>
                           <div className={"model-chat-row-wrapper"} key={index}>
                               <div className="model-chat-box">
                                   {li.result}
@@ -63,7 +60,7 @@ function Service(props) {
                           </div>
                       </>
                   }
-              </>
+              </div>
           );
         })}
       </div>

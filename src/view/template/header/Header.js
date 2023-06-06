@@ -95,7 +95,7 @@ function Header(props) {
                     {
                         isLogIn ?
                             <div className="btn-wrapper" onClick={()=>onClickStart()}>
-                                <div className="btn sign-in">Start</div>
+                                <div className="btn sign-in">Start -></div>
                             </div>
                             :
                             <div className="btn-wrapper" onClick={() => onClickLogIn()}>
