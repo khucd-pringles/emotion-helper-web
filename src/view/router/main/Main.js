@@ -4,8 +4,8 @@ import originalChatbot from "../../asset/images/original_chatbot.png";
 import outChatbot from "../../asset/images/ours_chatbot.png";
 import serviceCapture from "../../asset/images/service-capture.png";
 import serviceDescription from "../../asset/images/service-description.png";
-// import AiOutlineArrowDown from "react-icons/ai";
 import {TypeAnimation} from 'react-type-animation';
+import {FaLongArrowAltDown} from "react-icons/fa"
 
 const Feel = [
     {"label": "가난한", color: 'darkgray'},
@@ -131,11 +131,18 @@ function Main(props) {
                                 <div className="example-text">
                                     '시험을 망쳐서 속상해'
                                 </div>
-                                {/*<AiOutlineArrowDown/>*/}
+                                <div className="arrow-wrapper">
+                                    <FaLongArrowAltDown className='arrow-down'/>
+                                </div>
+
                                 <div className="example-emotion">
-                                    '낙담하는'
+                                    Model이 분석한 감정 = '낙담하는'
                                 </div>
                             </div>
+                            <div className="arrow-wrapper">
+                                <FaLongArrowAltDown className='arrow-down'/>
+                            </div>
+
                             <TypeAnimation
                                 sequence={[
                                     '친구랑 싸워서 속상해',
@@ -163,57 +170,6 @@ function Main(props) {
                     </div>
                     <div className="technique-wrapper">
                         뭘 넣지이이이잉이ㅣㅇ이이ㅣ이이ㅣ이이이이이이이이이이이이이ㅣ잉이
-                    </div>
-                </div>
-                <div className="content-wrapper">
-                    <div className="content-title">
-                        Review
-                    </div>
-                    <div className="review-wrapper">
-                        <div className="review-row-wrapper">
-                            <div className="review-box-wrapper">
-                                <div className="writer-wrapper">
-                                    <div className="img-box"></div>
-                                    <div className="writer-name">김형준</div>
-                                </div>
-                                <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고
-                                    있습니다.
-                                    저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
-                                </div>
-                            </div>
-                            <div className="review-box-wrapper">
-                                <div className="writer-wrapper">
-                                    <div className="img-box"></div>
-                                    <div className="writer-name">김형준</div>
-                                </div>
-                                <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고
-                                    있습니다.
-                                    저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
-                                </div>
-                            </div>
-                        </div>
-                        <div className="review-row-wrapper">
-                            <div className="review-box-wrapper">
-                                <div className="writer-wrapper">
-                                    <div className="img-box"></div>
-                                    <div className="writer-name">김형준</div>
-                                </div>
-                                <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고
-                                    있습니다.
-                                    저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
-                                </div>
-                            </div>
-                            <div className="review-box-wrapper">
-                                <div className="writer-wrapper">
-                                    <div className="img-box"></div>
-                                    <div className="writer-name">김형준</div>
-                                </div>
-                                <div className="review-text-wrapper">정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고
-                                    있습니다.
-                                    저에게 딱 필요한 서비스입니다. 정말 유용하게 잘 쓰고 있습니다. 저에게 딱 필요한 서비스입니다.
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div className="content-wrapper">
