@@ -47,14 +47,26 @@
       }
     }
     .banner-img-wrapper{
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 854px;
       height: 600px;
       margin-top: 72px;
-      border:1px solid gray;
-      border-radius: 12px;
+      .service-img{
+        width: 850px;
+        object-fit: contain;
+        border-radius: 12px;
+      }
+      .img-background-wrapper{
+        position: absolute;
+        width: 850px;
+        height: 305px;
+        left: 0;
+        top: 320px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+      }
     }
 
     .problem-wrapper{
@@ -160,6 +172,11 @@
             font-size: 40px;
             object-fit: contain;
           }
+        }
+        .result-text{
+          margin-bottom: 50px;
+          font-size: 24px;
+          font-weight: bold;
         }
       }
       .service-img-wrapper{

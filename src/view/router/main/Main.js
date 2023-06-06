@@ -3,6 +3,7 @@ import './style/Main.scss';
 import originalChatbot from "../../asset/images/original_chatbot.png";
 import outChatbot from "../../asset/images/ours_chatbot.png";
 import serviceTechnique from "../../asset/images/emotion_service.png";
+import serviceMain from "../../asset/images/service_main.png";
 import {TypeAnimation} from 'react-type-animation';
 import {FaLongArrowAltDown} from "react-icons/fa"
 
@@ -80,7 +81,10 @@ function Main(props) {
                         <div className="banner-title-row">BERT & GPT 파인튜닝 및 파이프라이닝을</div>
                         <div className="banner-title-row">활용한 감성 대화 챗봇</div>
                     </div>
-                    <div className="banner-img-wrapper">서비스 화면 캡처</div>
+                    <div className="banner-img-wrapper">
+                        <img src={serviceMain} alt="" className="service-img"/>
+                        <div className="img-background-wrapper"/>
+                    </div>
                 </div>
 
                 <div className="content-wrapper">
@@ -143,14 +147,14 @@ function Main(props) {
                             <div className="arrow-wrapper">
                                 <FaLongArrowAltDown className='arrow-down'/>
                             </div>
-
+                            <div className="result-text">결과</div>
                             <TypeAnimation
                                 sequence={[
-                                    '친구랑 싸워서 속상해',
+                                    '시험 망쳤을 땐 너무 답답하고 어렵죠. 하지만 그만큼 더 열심히 다음 시험을 준비할 수 있는 기회가 있다고 생각해요.',
                                     1000,
-                                    '올해 여름에는 비가 많이 온대',
+                                    '시험에서 좋은 결과를 얻지 못해서 마음이 상하시겠죠. 하지만 지금은 힘들어서 그럴 수 있으니까 일단은 잠시 마음의 정리를 할 시간을 가져보는 것도 좋겠어요.',
                                     1000,
-                                    '종강하면 해외여행 갈거야',
+                                    '이럴 땐 일단 잠시 마음을 비우고 다른 일에 집중할 수 있는 시간을 가지면서 기분을 전환해보는 것도 좋을 거예요. 그리고 다음 시험을 준비할 때는 실패했던 이유를 분석하고 더 철저하게 준비해보는 것도 좋은 방법이 될 수 있을 거에요.',
                                     1000,
                                     () => {
                                         console.log('Sequence completed'); // Place optional callbacks anywhere in the array
@@ -159,7 +163,7 @@ function Main(props) {
                                 wrapper="span"
                                 cursor={true}
                                 repeat={Infinity}
-                                style={{fontSize: '20px', display: 'inline-block',marginBottom:'50px'}}
+                                style={{fontSize: '20px', display: 'inline-block',maxWidth:'400px',marginBottom:'50px'}}
                             />
                             <div className="description-text-wrapper"></div>
                         </div>

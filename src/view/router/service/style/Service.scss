@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   height: calc(100vh - 88px);
-  background-color: silver;
+  background-color: ghostwhite;
   position: relative;
 
   .description-wrapper {
@@ -15,14 +15,15 @@
   .chat-wrapper {
     width: 100%;
     height: calc(100vh - 188px);
-    //border: 1px solid gray;
-    background-color: silver;
+    background-color: ghostwhite;
     overflow-y: scroll;
 
     .emotion-wrapper {
-      margin-left: 25px;
-      margin-bottom: 5px;
+      margin-left: 30px;
+      margin-bottom: 2px;
       color: #313131;
+      .emotion-text{
+      }
     }
 
     .model-chat-row-wrapper {

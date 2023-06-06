@@ -35,8 +35,6 @@ function Service(props) {
     }
   };
 
-  console.log('chatList', chatList)
-
   return (
     <div id={"Service"}>
       {/*<div className="description-wrapper"></div>*/}
@@ -54,7 +52,10 @@ function Service(props) {
                 </>
                 :
                 <>
-                  <div className="emotion-wrapper">Bert가 분석한 당신의 감정 : <span style={{fontWeight: 500, color: '#7950f7'}}>{li.feel_list[0]}</span></div>
+                  <div className="emotion-wrapper">
+                      <div className="emotion-text">
+                          Bert가 분석한 당신의 감정 : <span style={{fontWeight: 500, color: '#7950f7'}}>{li.feel_list[0]}</span></div>
+                      </div>
                   <div className={"model-chat-row-wrapper"} key={index}>
                     <div className="model-chat-box">
                       {li.result}
@@ -75,7 +76,7 @@ function Service(props) {
           onChange={(e) => setTextValue(e.target.value)}
           onKeyUp={(e) => onTypeEnter(e)}
         />
-        <div className="enter-btn" onClick={() => handleButtonClick()}>Enter</div>
+        <div className="enter-btn" >Enter</div>
       </div>
     </div>
   );
