@@ -86,7 +86,6 @@ function Main(props) {
                         <div className="img-background-wrapper"/>
                     </div>
                 </div>
-
                 <div className="content-wrapper">
                     <div className="problem-wrapper">
                         <div className="problem-text-wrapper">
@@ -157,7 +156,6 @@ function Main(props) {
                                     '이럴 땐 일단 잠시 마음을 비우고 다른 일에 집중할 수 있는 시간을 가지면서 기분을 전환해보는 것도 좋을 거예요. 그리고 다음 시험을 준비할 때는 실패했던 이유를 분석하고 더 철저하게 준비해보는 것도 좋은 방법이 될 수 있을 거에요.',
                                     1000,
                                     () => {
-                                        console.log('Sequence completed'); // Place optional callbacks anywhere in the array
                                     }
                                 ]}
                                 wrapper="span"

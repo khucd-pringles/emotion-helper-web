@@ -25,7 +25,7 @@ function Header(props) {
             <div className="header-container">
                 <div className="left-wrapper">
                     <div className="logo-wrapper">
-                        KHU
+                        Sweet Chat
                     </div>
                     <div className="tab-wrapper">
                         <div className="tab-box-wrapper" onClick={()=>handleClickScroll('Overview')}>
@@ -40,7 +40,6 @@ function Header(props) {
                         <div className="tab-box-wrapper" onClick={()=>handleClickScroll('Contact')}>
                             Contact
                         </div>
-
                     </div>
                 </div>
                 <div className="btn-wrapper" onClick={() => onClickStart()}>
