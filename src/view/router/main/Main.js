@@ -2,8 +2,7 @@ import React from 'react';
 import './style/Main.scss';
 import originalChatbot from "../../asset/images/original_chatbot.png";
 import outChatbot from "../../asset/images/ours_chatbot.png";
-import serviceCapture from "../../asset/images/service-capture.png";
-import serviceDescription from "../../asset/images/service-description.png";
+import serviceTechnique from "../../asset/images/emotion_service.png";
 import {TypeAnimation} from 'react-type-animation';
 import {FaLongArrowAltDown} from "react-icons/fa"
 
@@ -75,7 +74,7 @@ function Main(props) {
     return (
         <div id={"Main"}>
             <div className="container">
-                <div className="content-wrapper">
+                <div className="content-wrapper" id={'Overview'}>
                     <div className="banner-text">캡스톤디자인</div>
                     <div className="banner-title-wrapper">
                         <div className="banner-title-row">BERT & GPT 파인튜닝 및 파이프라이닝을</div>
@@ -105,7 +104,7 @@ function Main(props) {
                     </div>
                 </div>
 
-                <div className="content-wrapper">
+                <div className="content-wrapper" id={'How'}>
                     <div className="content-title">How ?</div>
                     <div className="sub-content-wrapper">
                         <div className="sub-title">사용자의 입력을 약 60개의 감정으로 분류</div>
@@ -129,14 +128,16 @@ function Main(props) {
                         <div className="description-wrapper">
                             <div className="example-wrapper">
                                 <div className="example-text">
-                                    '시험을 망쳐서 속상해'
+                                    <div className="example-index">User의 입력</div>
+                                    <div className="example-result">'시험을 망쳐서 속상해'</div>
                                 </div>
                                 <div className="arrow-wrapper">
                                     <FaLongArrowAltDown className='arrow-down'/>
                                 </div>
 
-                                <div className="example-emotion">
-                                    Model이 분석한 감정 = '낙담하는'
+                                <div className="example-text">
+                                    <div className="example-index">Model이 분석한 감정</div>
+                                    <div className="example-result">'낙담하는'</div>
                                 </div>
                             </div>
                             <div className="arrow-wrapper">
@@ -158,22 +159,24 @@ function Main(props) {
                                 wrapper="span"
                                 cursor={true}
                                 repeat={Infinity}
-                                style={{fontSize: '20px', display: 'inline-block'}}
+                                style={{fontSize: '20px', display: 'inline-block',marginBottom:'50px'}}
                             />
                             <div className="description-text-wrapper"></div>
                         </div>
                     </div>
                 </div>
-                <div className="content-wrapper technique">
+                <div className="content-wrapper technique" id={'Technique'}>
                     <div className="content-title">
                         Technique
                     </div>
                     <div className="technique-wrapper">
-                        뭘 넣지이이이잉이ㅣㅇ이이ㅣ이이ㅣ이이이이이이이이이이이이이ㅣ잉이
+                        <div className="technique-img-wrapper">
+                            <img src={serviceTechnique} alt="" className="technique-img"/>
+                        </div>
                     </div>
                 </div>
-                <div className="content-wrapper">
-                    <div className="content-title">
+                <div className="content-wrapper footer" id='Contact'>
+                    <div className="content-title small">
                         Contact Us
                     </div>
                     <div className="contact-us-wrapper">

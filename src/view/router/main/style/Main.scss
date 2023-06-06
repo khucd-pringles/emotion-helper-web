@@ -17,6 +17,10 @@
     text-align: center;
     font-size: 40px;
     font-weight: bold;
+    &.small{
+      margin: 40px 0;
+      font-size: 24px;
+    }
   }
   .content-wrapper{
     display: flex;
@@ -111,9 +115,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 5%;
-            padding:10px;
-            height: 30px;
+            width: 8%;
+            height: 50px;
             border-radius: 12px;
             text-align: center;
             font-weight: bold;
@@ -127,19 +130,29 @@
         flex-direction: column;
         align-items: center;
         margin: 50px 0;
+        padding:20px 40px;
+        border-radius: 24px;
+        box-shadow: 1px 2px 37px rgba(0,0,0,.044);
         .example-wrapper{
           display: flex;
           flex-direction: column;
           align-items: center;
           margin-top: 50px;
           .example-text{
-            font-size: 32px;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            .example-index{
+              margin-right: 24px;
+              font-size: 24px;
+              color:darkgray;
+            }
+            .example-result{
+              font-size: 30px;
+              font-weight: bold;
+              color:#1E2231;
+            }
           }
 
-          .example-emotion{
-
-          }
         }
         .arrow-wrapper{
           padding:50px 0;
@@ -180,6 +193,13 @@
       display: flex;
       justify-content: center;
       padding-bottom: 40px;
+      .technique-img-wrapper{
+        margin-bottom: 50px;
+        .technique-img{
+          width: 500px;
+          object-fit: contain;
+        }
+      }
     }
     .review-wrapper{
       padding-bottom: 40px;
@@ -234,20 +254,23 @@
         height: 80px;
         .name{
           margin-right: 160px;
-          font-size: 24px;
+          font-size: 18px;
           font-weight: bold;
         }
         .email{
           min-width: 260px;
-          font-size: 22px;
+          font-size: 18px;
           font-weight: bold;
-          color:dimgray;
         }
       }
     }
 
     &.technique{
       background: #FAFAFB;
+    }
+    &.footer{
+      background-color: #1E2231;
+      color:#D4D6DA;
     }
   }
 }
