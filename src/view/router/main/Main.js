@@ -90,7 +90,8 @@ function Main(props) {
                     <div className="problem-wrapper">
                         <div className="problem-text-wrapper">
                             <div className="problem-title">Problem</div>
-                            <div className="problem-text">기존의 문제점 블라블라블라블라인 문제점이 있었다.</div>
+                            <div className="problem-text">기존의 챗봇은 사용자에 입력만 기계적으로 답변할 뿐,</div>
+                            <div className="problem-text">사용자에게 공감을 하지 못했다</div>
                         </div>
                         <div className="problem-img-wrapper">
                             <img src={originalChatbot} alt="" className="problem-img"/>
@@ -99,7 +100,8 @@ function Main(props) {
                     <div className="problem-wrapper">
                         <div className="problem-text-wrapper margin-less">
                             <div className="problem-title">Solution</div>
-                            <div className="problem-text">문제점을 해결하기 위해 이런 방안 들을 적용했고, 어찌저찌하도록 수정했습니다.</div>
+                            <div className="problem-text">기존의 문제점을 해결하기 위해</div>
+                            <div className="problem-text">유저가 입력한 감정을 분석하여 답변에 그 감정을 반영하였다</div>
                         </div>
                         <div className="problem-img-wrapper">
                             <img src={outChatbot} alt="" className="problem-img"/>
